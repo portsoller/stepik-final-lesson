@@ -18,6 +18,7 @@ def browser(request):
     browser = None
     if browser_name == "chrome":
         options = Options()
+        options.add_argument("--window-size=1366,768")
         options.add_experimental_option('prefs', {'intl.accept_languages': user_language})
         print("\nstart chrome browser for test..")
         browser = webdriver.Chrome(options=options)
